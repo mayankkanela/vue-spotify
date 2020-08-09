@@ -1,28 +1,26 @@
-<template>
+  <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar />
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+<script>
+import "./style.css";
+import NavBar from './components/NavBar'
+import spotifyapi from './api/spotifyapi'
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    NavBar
+  },
+  beforeCreate(){
+    spotifyapi.authorize()
   }
-}
+
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
