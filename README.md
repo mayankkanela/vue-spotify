@@ -1,5 +1,20 @@
 # vue-music-app
 
+## Directory structure
+
+
+<image src="./screenshots/dir.PNG"/>
+
+
+## ScreenShot
+<image src="./screenshots/HomePage.PNG">
+
+## TODO
+* ~~Init project~~
+* ~~Create Components~~
+* ~~router~~
+* ~~api and store~~ 
+* Implement a player
 ## Project setup
 ```
 npm install

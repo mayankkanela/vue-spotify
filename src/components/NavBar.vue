@@ -28,7 +28,12 @@ export default {
   methods: {
       searchTrack()
       {
-        this.$store.dispatch('search', this.searchItem)       
+        this.$store.dispatch('search', this.searchItem)  
+        
+         if(this.$router.history.current.name != 'Home')
+         {
+           this.$router.go(-1)
+         }     
       }
   }
   
